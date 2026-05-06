@@ -955,6 +955,32 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
                 navbar.classList.add('glass-panel');
             }
         });
+        // Mobile Menu Toggle Script
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+        const mobileLinks = mobileMenu.querySelectorAll('#mobile-menu a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Ganti ikon hamburger menjadi 'X' saat menu terbuka
+            if(mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            } else {
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Tutup menu mobile otomatis jika salah satu link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            });
+        });
 
         // Lightbox Script
         const lightbox = document.getElementById('lightbox');
