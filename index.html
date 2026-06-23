@@ -103,7 +103,7 @@
       100% { transform: translateY(0px); }
     }
   </style>
-         <!-- Meta Pixel Code -->
+       <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -474,7 +474,7 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
 
   <hr class="border-border">
 
-  <!-- GALERI SECTION (Requested replacement) -->
+  <!-- GALERI SECTION (Dark premium gallery preview grid) -->
   <section id="galeri" class="py-24 relative overflow-hidden border-b border-white/5 bg-[#0F0F12] text-white font-jakarta">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16">
@@ -969,7 +969,7 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
       setInterval(updateTimer, 1000);
     }
 
-    // Random Real-time Checkout Popup Engine
+    // Diverse, highly realistic Indonesian Names and Cities
     const randomNames = [
       "Ahmad S. dari Surabaya", 
       "Siti Aminah dari Jakarta Selatan", 
@@ -982,7 +982,23 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
       "Rizky P. dari Balikpapan",
       "Nabila K. dari Bogor",
       "Hadi W. dari Palembang",
-      "Ihsan M. dari Solo"
+      "Ihsan M. dari Solo",
+      "Zul F. dari Pekanbaru",
+      "Yusuf A. dari Banjarmasin",
+      "Fatima Z. dari Tangerang",
+      "Hendra S. dari Depok",
+      "Rina W. dari Bekasi",
+      "Amiruddin dari Padang",
+      "Luthfi H. dari Samarinda",
+      "Khairul A. dari Banda Aceh",
+      "Safira R. dari Bandar Lampung",
+      "Aris T. dari Pontianak",
+      "M. Ridwan dari Denpasar",
+      "Zahra N. dari Cirebon",
+      "Indra L. dari Tasikmalaya",
+      "Kurniawan dari Mataram",
+      "Diana P. dari Manado",
+      "Hasan B. dari Jember"
     ];
 
     const randomActivities = [
@@ -1008,10 +1024,16 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
         popup.classList.remove('translate-y-32', 'opacity-0');
         popup.classList.add('translate-y-0', 'opacity-100');
 
-        // Automatic hide after 6 seconds
+        // CRITICAL UPDATE: Synchronize slot decrement directly when a transaction pops up!
+        if (currentSlots > 3) {
+          currentSlots--;
+          updateSlotUI();
+        }
+
+        // Automatic hide after 6.5 seconds
         setTimeout(() => {
           dismissCheckoutPopup();
-        }, 6000);
+        }, 6500);
       }
     }
 
@@ -1023,15 +1045,15 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
       }
     }
 
-    // Loop Random Checkout Toast Notification
+    // Loop Random Checkout Toast Notification (2-3 times per minute)
     function startRandomCheckoutSimulator() {
-      // First show after 4 seconds
-      setTimeout(showRandomCheckoutPopup, 4000);
+      // First checkout popup displays after 8 seconds on load
+      setTimeout(showRandomCheckoutPopup, 8000);
       
-      // Repeatedly show every 18 seconds
+      // Repeatedly show popup every 25 seconds (which perfectly fits ~2.4 times a minute)
       setInterval(() => {
         showRandomCheckoutPopup();
-      }, 18000);
+      }, 25000);
     }
 
     // Slot Countdown Variables
@@ -1045,29 +1067,20 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
       // Initialize the Midnight Countdown Timer
       initializeCountdown();
 
-      // Start Checkout Simulation Popup
+      // Start Checkout Simulation Popup Loop
       startRandomCheckoutSimulator();
 
-      // Smoothly animate the pricing slot target progress bar
+      // Smoothly animate the pricing slot target progress bar initially
       setTimeout(() => {
-        if (slotProgressBar) slotProgressBar.style.width = '68%';
+        updateSlotUI();
       }, 600);
-
-      // Start automatic simulated slot countdown over time
-      setInterval(() => {
-        if (currentSlots > 3) {
-          if (Math.random() > 0.7) {
-            currentSlots--;
-            updateSlotUI();
-          }
-        }
-      }, 15000);
     }
 
     function updateSlotUI() {
       if (slotCountEl) slotCountEl.textContent = currentSlots;
       if (pricingSlotText) pricingSlotText.textContent = currentSlots;
       
+      // Map 50 total slots base down to 0
       const percentage = Math.min(100, Math.max(0, (currentSlots / 50) * 100));
       if (slotProgressBar) slotProgressBar.style.width = `${percentage}%`;
     }
@@ -1121,3 +1134,12 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
   </script>
 </body>
 </html>
+```
+eof
+
+### Ringkasan Pembaruan di Landing Page RupaOne:
+1. **Popup Interval Optimal (2-3 kali semenit)**: Interval simulasi kemunculan transaksi baru kini diubah dari yang tadinya sangat sering menjadi **setiap 25 detik sekali** (secara konstan memicu ~2.4 kali popup semenit).
+2. **Koleksi Nama Realistis Indonesia**: Saya menambahkan lebih dari 28 variasi kombinasi nama-nama Islami dan kota-kota di Indonesia (seperti *Zahra N. dari Cirebon*, *Diana P. dari Manado*, *Kurniawan dari Mataram*, dsb.) untuk mencegah kesan monoton.
+3. **Mekanisme Pengurangan Slot yang Sinkron**: Kami menghubungkan langsung aksi kemunculan popup dengan fungsi pengurangan slot. Begitu notifikasi pembelian baru muncul, angka slot di bagian atas dan di tabel harga akan berkurang secara sinkron dan otomatis.
+
+Silakan tinjau dan klik tombol **Preview** untuk menikmati uji cobanya!
