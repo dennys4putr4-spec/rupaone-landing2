@@ -1,92 +1,109 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth scroll-pt-24">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RupaOne | Feed Generator Visual Berbasis AI</title>
-    <meta name="description" content="AI yang ngerti brand kamu dulu, baru bantu kamu generate konten visual, ilustrasi, hingga feed yang konsisten setiap hari.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            500: '#10b981', // Emerald primary
-                            600: '#059669',
-                            900: '#064e3b',
-                        },
-                        dark: {
-                            900: '#0a0a0a',
-                            800: '#171717',
-                            700: '#262626',
-                        }
-                    },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RupaOne — Konten Dakwah Profesional Setiap Hari, Tanpa Bisa Desain</title>
+  <meta name="description" content="AI yang pelajari brand-mu dulu, baru generate konten. Sekali bayar Rp 80.000 — akses selamanya.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0A0A14',
+            'ink-2': '#2D2D42',
+            'ink-3': '#7A7A9A',
+            surface: '#FFFFFF',
+            'surface-2': '#F5F6FF',
+            'surface-3': '#ECEEFF',
+            border: '#E2E4F0',
+            blue: {
+              DEFAULT: '#3B82F6',
+              light: '#EFF6FF',
+              mid: '#BFDBFE',
+            },
+            purple: {
+              DEFAULT: '#7C3AED',
+              light: '#F5F3FF',
+              mid: '#DDD6FE',
+              soft: '#8B5CF6',
+            },
+            // Custom brand and dark configurations for the requested gallery section
+            brand: {
+              500: '#7C3AED',
+              600: '#6D28D9',
+            },
+            dark: {
+              800: '#18181B',
+              900: '#0F0F12',
             }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
         }
-    </script>
-    <style>
-        body {
-            background-color: #0a0a0a;
-            color: #f5f5f5;
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #10b981, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bg-gradient-brand {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-        }
-        .glass-panel {
-            background: rgba(23, 23, 23, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .hero-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, rgba(0,0,0,0) 70%);
-            top: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-            pointer-events: none;
-        }
-        #galeri img {
-            cursor: pointer;
-        }
-    </style>
-     <!-- Meta Pixel Code -->
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F6FF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #DDD6FE;
+      border-radius: 99px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8B5CF6;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Elegant gradient text classes */
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #7C3AED 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Modern Heading Style - Plus Jakarta Sans Configuration */
+    .font-jakarta {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.02em !important;
+    }
+
+    /* Floating animation for transparent hero image */
+    .float-slow {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+         <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -106,937 +123,1001 @@ src="https://www.facebook.com/tr?id=1964793987484171&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
-<body class="antialiased selection:bg-brand-500 selection:text-white">
+<body class="font-sans bg-white text-ink antialiased selection:bg-purple-light selection:text-purple">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center text-white font-bold text-xl">
-                        R
-                    </div>
-                    <span class="font-heading font-bold text-2xl tracking-tight">RupaOne</span>
-                </a>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#format" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Fitur</a>
-                    <a href="#cara-kerja" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Cara Kerja</a>
-                    <a href="#testimoni" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Testimoni</a>
-                    <a href="#harga" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Harga</a>
-                    <a href="https://docs.google.com/document/d/1byoOx07eDyMQ3U551PO_eLg3SCk5rvxtdiQwgr8CXcw/edit?usp=sharing" target="_blank" class="text-brand-500 hover:text-brand-400 transition-colors text-sm font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-gift"></i> Free Prompt
-                    </a>
-                     <a href="https://detrastudios.myr.id/catalog/poster-acara-unlock-code" target="_blank" class="text-brand-500 hover:text-brand-400 transition-colors text-sm font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-gift"></i> Unlock Full
-                    </a>
-                    <a href="https://detrastudios.myr.id/catalog/rupaone-full" target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]">
-                        Dapatkan Akses
-                    </a>
-                </div>
-                <!-- Mobile menu button -->
-               <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl transition-transform duration-300"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+  <!-- URGENCY BAR -->
+  <div class="bg-ink text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium sticky top-0 z-50 shadow-md flex flex-wrap justify-center items-center gap-1.5">
+    <span>🔥 Early Access: Sisa <span id="slot-count" class="text-blue-mid font-bold transition-all duration-500">34</span> slot harga Rp 80.000 —</span>
+    <span class="bg-red-500/30 text-red-300 px-2 py-0.5 rounded font-mono font-bold inline-flex items-center gap-1">
+      <i class="fa-regular fa-clock text-xs"></i> Berakhir dalam <span id="top-timer">00:00:00</span>
+    </span>
+  </div>
 
-        <!-- Mobile Menu Container (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark-900 border-t border-white/10 absolute w-full left-0 top-20 px-4 py-6 shadow-2xl flex flex-col gap-4 transition-all duration-300 origin-top">
-           <a href="#format" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Fitur</a>
-           <a href="#cara-kerja" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Cara Kerja</a>
-           <a href="#testimoni" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Testimoni</a>
-           <a href="#harga" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Harga</a>
-           <a href="https://docs.google.com/document/d/1byoOx07eDyMQ3U551PO_eLg3SCk5rvxtdiQwgr8CXcw/edit?usp=sharing" target="_blank" class="text-brand-500 hover:text-brand-400 transition-colors text-sm font-bold flex items-center gap-2">
-             <i class="fa-solid fa-gift"></i> Free Prompt
-           </a>
-           <a href="https://detrastudios.myr.id/catalog/poster-acara-unlock-code" target="_blank" class="text-brand-500 hover:text-brand-400 transition-colors text-sm font-bold flex items-center gap-2">
-             <i class="fa-solid fa-gift"></i> Unlock Full
-           </a>
-           <a href="https://detrastudios.myr.id/catalog/rupaone-full" target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]">
-           Dapatkan Akses
-            </a>
-        </div>
-    </nav>
+  <!-- NAV -->
+  <nav class="border-b border-border py-4 px-6 flex items-center justify-between bg-white/95 backdrop-blur-md sticky top-[38px] z-40 transition-all">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue to-purple flex items-center justify-center text-white font-jakarta font-extrabold text-lg">R</div>
+      <span class="font-jakarta font-extrabold text-xl tracking-tight bg-gradient-to-r from-blue to-purple bg-clip-text text-transparent">RupaOne</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="#harga" class="hidden sm:inline-flex text-xs font-semibold text-ink-2 hover:text-purple transition-colors">Harga</a>
+      <a href="#faq" class="hidden sm:inline-flex text-xs font-semibold text-ink-2 hover:text-purple transition-colors">FAQ</a>
+      <a href="https://detrastudios.myr.id/catalog/rupaone-full" class="bg-gradient-to-r from-blue to-purple text-white px-6 py-3 rounded-full text-xs sm:text-sm font-extrabold shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">
+        Dapatkan Akses — Rp 80.000
+      </a>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="hero-glow"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-500 text-sm font-medium mb-8">
-                    <span class="relative flex h-2.5 w-2.5">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
-                    </span>
-                    Early Access Dibuka - Harga Spesial
-                </div>
-                <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                    Cuma Modal Klik Gak Perlu Jago Prompt <br class="hidden md:block" />
-                    <span class="text-gradient">Konten Dakwahmu Auto Naik Level</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                    AI yang ngerti brand kamu dulu, baru bantu kamu generate konten visual, ilustrasi, hingga feed yang konsisten setiap hari. Bukan sekadar tools, ini sistem.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#harga" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] flex items-center justify-center gap-2">
-                        Ambil Early Access <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="https://youtube.com/shorts/pxlYj_AjyUM?si=EUyPRQBbtj8BNLKd" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-lg border border-brand-500 text-brand-400 hover:bg-brand-500/10 transition-colors flex items-center justify-center gap-2">
-                        <i class="fa-brands fa-youtube text-red-500"></i> Tonton Cara Kerja
-                    </a>
-                </div>
-                <p class="mt-6 text-sm text-gray-500">
-                    <i class="fa-solid fa-shield-check text-brand-500 mr-1"></i> Bayar sekali, akses selamanya. Tanpa biaya bulanan.
-                </p>
-            </div>
-
-            <!-- Hero Image/Mockup -->
-            <div class="mt-20 relative mx-auto max-w-5xl">
-                <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-blue-500 rounded-2xl blur opacity-20"></div>
-                <div class="relative rounded-2xl bg-dark-800 border border-gray-800 p-2 shadow-2xl">
-                    <img src="https://drive.google.com/thumbnail?id=1uO-P-sbCkoiPFRiQRQkugd5EnwLv8Jce&sz=w1200" alt="Preview Aplikasi RupaOne" class="rounded-xl w-full h-[400px] md:h-[600px] object-cover opacity-80 hover:opacity-100 transition-opacity duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="py-24 bg-dark-900 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Ini Yang Terjadi <span class="text-red-500">Setiap Hari</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Kamu tahu harus bikin konten. Tapi setiap buka HP… blank. Inilah yang terjadi:</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
-                <!-- Card 1 -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Stuck Ide & Blank</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Buka notes, buka HP, scroll-scroll… tapi nggak tahu mau bikin konten apa. Akhirnya nggak posting sama sekali.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-dice"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Posting Random</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Hari ini promo, besok quote, lusa nggak jelas. Feed berantakan. Audiens bingung kamu ini siapa.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-chart-line-down"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Konten Sepi</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Sudah capek-capek desain berjam-jam, tapi views jeblok. Mulai mikir "emang gue nggak cocok bikin konten kali ya."</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-clone"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Hasil Generik</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Pakai tools tapi hasilnya generik. Template orang lain, aset yang sama dipakai ribuan akun. Feed kamu nggak punya karakter.</p>
-                </div>
-                <!-- Card 5 (Dari Gambar) -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-fill-drip"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Kurang Skill Desain</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Ingin mendesain sendiri tapi tidak bisa menggambar dan tidak mahir software desain kompleks seperti Illustrator.</p>
-                </div>
-                <!-- Card 6 (Dari Gambar) -->
-                <div class="glass-panel p-8 rounded-2xl border-t-2 border-t-red-500/50 h-full flex flex-col">
-                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6 shrink-0">
-                        <i class="fa-solid fa-credit-card"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 shrink-0">Biaya Mahal</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Membayar desainer lepas mahal, atau langganan platform desain tiap bulan tapi hasilnya masih terasa pasaran.</p>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center max-w-3xl mx-auto glass-panel p-8 md:p-10 rounded-3xl border border-red-500/20 bg-gradient-to-b from-red-500/5 to-transparent">
-                <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                    Masalahnya bukan kamu nggak bisa bikin konten.<br>
-                    Masalahnya <span class="text-red-500">kamu nggak punya sistem.</span>
-                </h3>
-                <p class="text-gray-400 text-lg">Kreator yang konsisten bukan yang paling kreatif. Mereka yang punya sistem visual yang bisa diulang setiap hari — tanpa mikir dari nol.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution / Why RupaOne -->
-    <section id="fitur" class="py-24 relative overflow-hidden">
-        <!-- Decor blobs -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="absolute top-0 right-48 w-96 h-96 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2">
-                    <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Kenapa <span class="text-brand-500">RupaOne</span> Berbeda?</h2>
-                    <p class="text-gray-400 text-lg mb-8">Sebagian besar tools AI langsung men-generate tanpa konteks. RupaOne dirancang untuk <strong>mempelajari karakter brand kamu terlebih dahulu</strong> sebelum memproduksi konten.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 shrink-0 bg-brand-500/10 rounded-full flex items-center justify-center text-brand-500 border border-brand-500/30">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading text-xl font-semibold mb-2">Paham DNA Brand Kamu</h4>
-                                <p class="text-gray-400 text-sm">Output 100% mengikuti arah visual, palet warna, dan estetika brand kamu. Bukan template random.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 shrink-0 bg-brand-500/10 rounded-full flex items-center justify-center text-brand-500 border border-brand-500/30">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading text-xl font-semibold mb-2">Sekali Klik, Sistem Bekerja</h4>
-                                <p class="text-gray-400 text-sm">Tidak perlu pusing memikirkan *prompt* panjang setiap hari. Sistem kami yang mengurus *prompting* di belakang layar.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 shrink-0 bg-brand-500/10 rounded-full flex items-center justify-center text-brand-500 border border-brand-500/30">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-heading text-xl font-semibold mb-2">Konsistensi Tanpa Usaha</h4>
-                                <p class="text-gray-400 text-sm">Post 1, post 10, post 100 akan terlihat senada dan membentuk identitas visual yang kuat di mata audiens.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2 w-full flex flex-col gap-6">
-                    <!-- Tools Biasa Card -->
-                    <div class="glass-panel rounded-2xl p-6 lg:p-8 border border-gray-700 relative bg-dark-800/80">
-                        <h3 class="font-heading text-sm md:text-base tracking-widest font-bold mb-6 flex items-center gap-3 text-gray-400 uppercase">
-                            <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-xmark text-red-500 text-sm"></i>
-                            </div> 
-                            Tools Desain Biasa
-                        </h3>
-                        <ul class="space-y-5">
-                            <li class="flex items-start gap-4 text-gray-400 text-sm md:text-base">
-                                <i class="fa-solid fa-circle-xmark text-red-500 mt-1 shrink-0 text-lg"></i>
-                                <span>Langganan bulanan mahal (akses hilang jika stop bayar).</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-gray-400 text-sm md:text-base">
-                                <i class="fa-solid fa-circle-xmark text-red-500 mt-1 shrink-0 text-lg"></i>
-                                <span>Perlu skill desain dan waktu untuk hasil profesional.</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-gray-400 text-sm md:text-base">
-                                <i class="fa-solid fa-circle-xmark text-red-500 mt-1 shrink-0 text-lg"></i>
-                                <span>Ribuan pengguna memakai aset/template yang persis sama.</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-gray-400 text-sm md:text-base">
-                                <i class="fa-solid fa-circle-xmark text-red-500 mt-1 shrink-0 text-lg"></i>
-                                <span>Harus memikirkan ide dan prompt (perintah AI) dari nol.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- RupaOne Card -->
-                    <div class="rounded-2xl p-6 lg:p-8 border border-brand-500 relative bg-gradient-to-br from-brand-800 to-dark-900 shadow-[0_10px_30px_rgba(16,185,129,0.3)]">
-                        <div class="absolute -top-4 right-6 bg-yellow-500 text-dark-900 text-xs md:text-sm font-bold px-4 py-2 rounded-full shadow-lg">
-                            SOLUSI CERDAS
-                        </div>
-                        <h3 class="font-heading text-sm md:text-base tracking-widest font-bold mb-6 flex items-center gap-3 text-white uppercase">
-                            <div class="w-6 h-6 rounded-full bg-brand-400/20 flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-check text-brand-400 text-sm"></i>
-                            </div> 
-                            RupaOne
-                        </h3>
-                        <ul class="space-y-5">
-                            <li class="flex items-start gap-4 text-white text-sm md:text-base font-medium">
-                                <i class="fa-solid fa-circle-check text-brand-400 mt-1 shrink-0 text-lg"></i>
-                                <span>Bayar sekali Rp64.000 — akses selamanya tanpa syarat rumit.</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-white text-sm md:text-base font-medium">
-                                <i class="fa-solid fa-circle-check text-brand-400 mt-1 shrink-0 text-lg"></i>
-                                <span>AI bantu generate ilustrasi — Anda cuma perlu memilih gaya.</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-white text-sm md:text-base font-medium">
-                                <i class="fa-solid fa-circle-check text-brand-400 mt-1 shrink-0 text-lg"></i>
-                                <span>Konten 100% unik hasil kombinasi gaya pilihan Anda.</span>
-                            </li>
-                            <li class="flex items-start gap-4 text-white text-sm md:text-base font-medium">
-                                <i class="fa-solid fa-circle-check text-brand-400 mt-1 shrink-0 text-lg"></i>
-                                <span>Tinggal pilih arah desain, sistem yang bekerja untukmu.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="cara-kerja" class="py-24 bg-dark-800 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Cara Kerja <span class="text-brand-500">3 Langkah</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Dari ide ke konten siap posting — di bawah 2 menit.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 relative auto-rows-fr">
-                <!-- Connecting Line for Desktop -->
-                <div class="hidden md:block absolute top-[40px] left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-transparent via-brand-500/30 to-transparent z-0"></div>
-
-                <!-- Step 1 -->
-                <div class="relative z-10 flex flex-col items-center text-center h-full">
-                    <div class="w-20 h-20 rounded-full bg-dark-900 border-2 border-brand-500 flex items-center justify-center text-brand-500 text-2xl font-bold mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)] shrink-0">
-                        1
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3 shrink-0">Pilih Format</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed px-4 flex-grow">Tentukan format: single poster, carousel swipeable, atau infografis. Dioptimalkan untuk IG, TikTok & FB.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative z-10 flex flex-col items-center text-center h-full">
-                    <div class="w-20 h-20 rounded-full bg-dark-900 border-2 border-brand-500 flex items-center justify-center text-brand-500 text-2xl font-bold mb-6 shadow-[0_0_15px_rgba(16,185,129,0.2)] shrink-0">
-                        2
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3 shrink-0">AI Generate</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed px-4 flex-grow">Pilih arah visual. RupaOne AI kemudian generate ilustrasi dan layout relevan. Tanpa perlu cari gambar.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative z-10 flex flex-col items-center text-center h-full">
-                    <div class="w-20 h-20 rounded-full bg-brand-500 border-2 border-brand-500 flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-[0_0_20px_rgba(16,185,129,0.4)] shrink-0">
-                        3
-                    </div>
-                    <h3 class="font-heading text-2xl font-bold mb-3 shrink-0">Kustomisasi & Post</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed px-4 flex-grow">Sesuaikan teks, warna, dan logo brand kamu dengan mudah. Download HD, langsung posting.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fitur Format Section (Satu Platform, Semua Format) -->
-    <section id="format" class="py-24 relative bg-dark-900 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
-                <div class="max-w-2xl">
-                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Satu Platform, <span class="text-brand-500">Semua Format</span></h2>
-                    <p class="text-gray-400 text-lg">AI RupaOne otomatis membuat ilustrasi dan layout yang relevan di semua format. Hasilnya: personal, profesional, dan siap pakai.</p>
-                </div>
-                <a href="#harga" class="text-brand-500 hover:text-brand-400 font-semibold flex items-center gap-2 transition-colors group whitespace-nowrap mb-1 md:mb-2">
-                    Lihat Detail Harga <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6 auto-rows-fr">
-                <!-- Single Poster -->
-                <div class="glass-panel p-8 rounded-2xl border border-gray-700/50 hover:border-brand-500/50 transition-colors group h-full flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.1)] shrink-0">
-                        <i class="fa-solid fa-image"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 text-white shrink-0">Single Poster</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Satu feed post "stop-scroll" untuk promo, kutipan brand, atau inspirasi. Sangat efektif menyampaikan satu pesan kuat yang langsung menempel di ingatan audiens.</p>
-                </div>
-
-                <!-- Carousel Swipeable -->
-                <div class="glass-panel p-8 rounded-2xl border border-gray-700/50 hover:border-brand-500/50 transition-colors group h-full flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.1)] shrink-0">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 text-white shrink-0">Carousel Swipeable</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Serangkaian slide yang mengajak audiens terus menggulir. Cocok untuk edukasi berantai, storytelling, atau demo produk untuk meningkatkan engagement rate.</p>
-                </div>
-
-                <!-- Infografis Data -->
-                <div class="glass-panel p-8 rounded-2xl border border-gray-700/50 hover:border-brand-500/50 transition-colors group h-full flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.1)] shrink-0">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 text-white shrink-0">Infografis Data</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Ubah data atau informasi kompleks menjadi visual yang mudah dicerna. Infografis terbukti menarik interaksi dan <i class="text-gray-300">shares</i> jauh lebih tinggi.</p>
-                </div>
-
-                <!-- Poster Event -->
-                <div class="glass-panel p-8 rounded-2xl border border-gray-700/50 hover:border-brand-500/50 transition-colors group h-full flex flex-col">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(16,185,129,0.1)] shrink-0">
-                        <i class="fa-solid fa-calendar-check"></i>
-                    </div>
-                    <h3 class="font-heading text-xl font-bold mb-3 text-white flex items-center gap-3 shrink-0">
-                        Poster Event
-                        <span class="text-[10px] bg-brand-500/20 text-brand-400 px-2 py-1 rounded-md border border-brand-500/30 uppercase tracking-wider">Paket Full</span>
-                    </h3>
-                    <p class="text-gray-400 text-sm leading-relaxed flex-grow">Desain profesional untuk pengumuman event, webinar, atau promo spesial musiman. Buat audiens menantikan acara Anda dengan tampilan pro.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual Styles List Section -->
-    <section id="visual-styles" class="py-16 relative bg-dark-800/50 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4">Pilihan <span class="text-brand-500">Visual Style</span> Bebas Pilih</h3>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-                Sesuaikan identitas brand kamu dengan berbagai pilihan gaya ilustrasi AI yang unik dan konsisten.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Vector Dreamy</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Flatmo</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Notion Style</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Soft Manhwa</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Knitted Yarn</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Line Art Coloring Book</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Quilling Paper</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Urban K-Doodle</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> 3D Paper Craft</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Plasticine Clay</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Hand Drawn Doodle</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Photo Realistic</span>
-                <span class="px-5 py-2.5 rounded-full border border-gray-600 bg-dark-800 text-gray-300 font-medium hover:border-brand-500 hover:text-brand-400 transition-colors cursor-default shadow-sm"><i class="fa-solid fa-palette text-brand-500/70 mr-2"></i> Soft 3D Avatar</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeri Section -->
-    <section id="galeri" class="py-24 relative overflow-hidden border-b border-white/5 bg-dark-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <p class="text-brand-500 font-bold tracking-widest text-sm uppercase mb-3">Lihat Hasilnya Dulu</p>
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Ini Contoh Konten yang Dibuat dengan <span class="text-brand-500">RupaOne</span></h2>
-                <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                    Semua konten di bawah ini dihasilkan menggunakan RupaOne — tanpa skill desain, tanpa Canva, tanpa Photoshop. Kamu bisa bikin yang serupa dalam 2 menit.
-                </p>
-            </div>
-
-            <div class="space-y-16">
-                <!-- Single Poster -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-image text-brand-500"></i> Single Poster
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1kkWmUrslCisKS8xxkij4AU-wk96tJ3NF&sz=w800" alt="Poster 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=13mTq3k2zIyhc4ZC1Y_yXLwTZ7YfHbAIr&sz=w800" alt="Poster 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1Zri-qJqWBgIzBLpeRYkJpGLkyjZiz19t&sz=w800" alt="Poster 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=11v-GOgB5na8GMKPZ9W3ixozqmaQIbErY&sz=w800" alt="Poster 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poster Story -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-mobile-screen text-brand-500"></i> Poster Story (IG/TikTok)
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1upoyUgaPoqVFkXY8IUjXCBvOuDbIDcGq&sz=w800" alt="Story 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1DkJTZ-RZOZn_7Url7AG31wFkncyldv3O&sz=w800" alt="Story 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1W6JnXtNaK10XRUCItVRHS-utrPs5UzyX&sz=w800" alt="Story 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1tYZSwi4BuQxr0fVIu3pzADCh91cwmcuD&sz=w800" alt="Story 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Infografis -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-chart-pie text-brand-500"></i> Infografis
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1vtKOpgjXtGf3hWqS5nesO61ni36EvkCD&sz=w800" alt="Infografis 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1tPT_bW8RAoLRtPunIGLLaD97zT_bRvbo&sz=w800" alt="Infografis 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1v8Q7BJucnDurxGoALsWCuhDo4a6nZqb-&sz=w800" alt="Infografis 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1RamaGNf6EwY9wDOplc9rltEYV1stl3QK&sz=w800" alt="Infografis 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ilustrasi -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-wand-magic-sparkles text-brand-500"></i> Ilustrasi Orisinal
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="relative aspect-square rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1gtLVrR2UtesB11RQz1AHCaESrEGwYpZq&sz=w800" alt="Ilustrasi 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-square rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1bXirL-To8J9FaE9V2-TBSqyWznlBAiBq&sz=w800" alt="Ilustrasi 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-square rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1LQaJ72XNwhu8LE3ZYEQpuYWVYVvF13Zy&sz=w800" alt="Ilustrasi 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-square rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1wvNVvCaOAvmGip8YPluNZ_fnU84Kl4tD&sz=w800" alt="Ilustrasi 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poster Event -->
-                <div>
-                    <h3 class="font-heading text-2xl font-bold mb-6 flex items-center gap-3">
-                        <i class="fa-solid fa-calendar-star text-brand-500"></i> Poster Event <span class="text-xs bg-brand-500/20 text-brand-400 px-2 py-1 rounded-md ml-2 border border-brand-500/30">Paket Full</span>
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1Azb76SB6iNNJgjN8_4Y4rycfkE6N8i9m&sz=w800" alt="Event 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1PIFbXuugwVb406CbU7G-ZK8LJ6dvJwq_&sz=w800" alt="Event 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=1ht4K_SkhPwNPTTVUu8CDAteSQM4X8Sv1&sz=w800" alt="Event 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 border border-white/10 group">
-                            <img src="https://drive.google.com/thumbnail?id=11lHTCafGEsirjGAj_YYsIM0vPnWWa7dI&sz=w800" alt="Event 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-20 text-center glass-panel p-8 rounded-3xl border border-brand-500/20 max-w-3xl mx-auto bg-brand-500/5">
-                <p class="text-xl text-gray-300 mb-6">Semua ini bisa kamu buat sendiri — <span class="text-white font-bold">dalam 2 menit pertama.</span></p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#harga" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)]">
-                        Lihat Paket & Mulai Sekarang <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="https://docs.google.com/document/d/1byoOx07eDyMQ3U551PO_eLg3SCk5rvxtdiQwgr8CXcw/edit?usp=sharing" target="_blank" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 rounded-xl font-bold text-lg border border-gray-600 hover:bg-gray-800 text-white transition-colors">
-                        <i class="fa-solid fa-wand-magic-sparkles text-yellow-400"></i> Coba Generate Gratis
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Proof / Testimonial -->
-    <section id="testimoni" class="py-24 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <i class="fa-solid fa-quote-left text-6xl text-brand-500/20 mb-6"></i>
-            <h2 class="font-heading text-3xl md:text-4xl font-medium leading-tight mb-10 text-gray-200">
-                "RupaOne membuat kami lebih konsisten menyebarkan ilmu dan kebaikan. Memberikan identity dan karakter visual sendiri kepada brand kami sehingga <span class="text-brand-500">sangat mudah dikenali audiens.</span>"
-            </h2>
-            <div class="flex flex-col items-center justify-center">
-                <div class="w-16 h-16 bg-gray-700 rounded-full mb-4 overflow-hidden border-2 border-brand-500">
-                    <!-- Menggunakan link avatar pria bule -->
-                    <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Avatar Pria Bule" class="w-full h-full object-cover">
-                </div>
-                <div class="font-bold text-lg">Tim Sahijra</div>
-                <div class="text-brand-500 text-sm mb-3">Akun Dakwah & Edukasi</div>
-                <div class="flex gap-1 text-yellow-400 text-sm">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <a href="https://www.instagram.com/sahijra?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-dark-800 border border-white/10 hover:border-brand-500/50 text-gray-300 hover:text-white transition-colors text-sm shadow-lg">
-                    <i class="fa-brands fa-instagram text-pink-500 text-lg"></i> Cek IG @sahijra
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="harga" class="py-24 bg-dark-900 border-y border-white/5 relative overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-brand-500/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Early Bird & Price Comparison -->
-            <div class="max-w-3xl mx-auto mb-20 text-center">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-bold tracking-widest uppercase mb-6">
-                    🔥 Penawaran Early Bird
-                </div>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                    Investasi Sekali,<br>Konten Selamanya.
-                </h2>
-                <p class="text-gray-300 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-                    RupaOne baru diluncurkan. Jadilah yang pertama mendapatkan manfaat seumur hidup sebelum harga beralih ke sistem langganan.
-                </p>
-
-                <!-- Comparison Box -->
-                <div class="glass-panel p-6 md:p-8 rounded-2xl border border-gray-700 bg-dark-800/80 text-left shadow-lg">
-                    <p class="text-blue-200/60 text-xs font-bold tracking-widest uppercase mb-6">PERBANDINGAN BIAYA:</p>
-
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center text-gray-400 text-sm md:text-base">
-                            <span>Jasa Ilustrator (1 Konten)</span>
-                            <span class="line-through decoration-gray-500/70">Rp 150.000 - 500.000</span>
-                        </div>
-                        <div class="flex justify-between items-center text-gray-400 text-sm md:text-base">
-                            <span>Canva Pro (Per Bulan)</span>
-                            <span class="line-through decoration-gray-500/70">Rp 150.000+</span>
-                        </div>
-                        <div class="border-t border-gray-700/50 my-5"></div>
-                        <div class="flex justify-between items-center text-yellow-400 text-lg md:text-xl font-bold">
-                            <span>RupaOne (Seumur Hidup)</span>
-                            <span>Rp 64.000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bonus VoMagic Banner -->
-            <div class="max-w-4xl mx-auto mb-16">
-                <div class="glass-panel p-8 md:p-10 rounded-3xl border-2 border-indigo-500/50 bg-gradient-to-br from-indigo-900/40 to-dark-900 relative overflow-hidden shadow-[0_0_30px_rgba(79,70,229,0.15)]">
-                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
-                    <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
-                        <div class="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-2xl bg-indigo-500/20 flex items-center justify-center text-4xl md:text-5xl text-indigo-400 border border-indigo-500/30">
-                            <i class="fa-solid fa-microphone-lines"></i>
-                        </div>
-                        <div class="flex-1 text-center md:text-left">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 text-xs font-bold tracking-widest uppercase mb-3 border border-indigo-500/30">
-                                🎁 Spesial Untuk Pembelian Paket Full
-                            </div>
-                            <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
-                                Gratis Bonus: <span class="text-indigo-400">VoMagic AI</span>
-                            </h3>
-                            <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                                Tools AI canggih untuk membuat <strong>voice over yang terdengar natural seperti manusia</strong>. Dilengkapi dengan berbagai pilihan karakter suara, pengaturan tone, dan kontrol detail seperti pitch serta kecepatan bicara.
-                            </p>
-                            <div class="flex flex-wrap justify-center md:justify-start gap-4 text-xs font-medium text-indigo-200">
-                                <span class="bg-indigo-500/20 px-3 py-1.5 rounded-lg border border-indigo-500/30"><i class="fa-solid fa-check mr-1"></i> Audio Profesional Mudah Dibuat</span>
-                                <span class="bg-indigo-500/20 px-3 py-1.5 rounded-lg border border-indigo-500/30"><i class="fa-solid fa-check mr-1"></i> Cocok Untuk Iklan & Narasi</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mb-12">
-                <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4">Pilih Paket Sesuai Kebutuhanmu</h3>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-                <!-- Core Plan -->
-                <div class="glass-panel rounded-3xl p-8 border border-white/10 hover:border-brand-500/30 transition-all duration-300 h-full flex flex-col">
-                    <div class="mb-8 shrink-0">
-                        <h3 class="font-heading text-2xl font-bold mb-2">RupaOne Core</h3>
-                        <p class="text-gray-400 text-sm">Sistem dasar untuk kreator konsisten.</p>
-                    </div>
-                    <div class="mb-8 shrink-0">
-                        <div class="flex items-end gap-2 mb-2">
-                            <span class="text-gray-400 line-through text-lg">Rp 149.000</span>
-                        </div>
-                        <div class="flex items-end gap-2">
-                            <span class="font-heading text-5xl font-bold">Rp 64.000</span>
-                            <span class="text-gray-400 mb-2">/ selamanya</span>
-                        </div>
-                    </div>
-                    <ul class="space-y-4 mb-10 flex-grow">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Format Single Poster (Feed stop-scroll)</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Format Carousel (Konten swipeable edukasi)</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Format Infografis</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">AI generate ilustrasi otomatis</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Kustomisasi warna & brand logo</span>
-                        </li>
-                    </ul>
-                    <a href="https://detrastudios.myr.id/catalog/rupaone-core" target="_blank" class="w-full block text-center py-4 rounded-xl font-semibold border border-gray-600 hover:bg-gray-800 transition-colors mt-auto shrink-0">
-                        Pilih Core
-                    </a>
-                </div>
-
-                <!-- Full Plan (Highlighted) -->
-                <div class="glass-panel rounded-3xl p-8 border-2 border-brand-500 relative shadow-[0_10px_30px_rgba(16,185,129,0.15)] h-full flex flex-col bg-brand-500/5">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                        PALING DIREKOMENDASIKAN
-                    </div>
-                    <div class="mb-8 mt-2 shrink-0">
-                        <h3 class="font-heading text-2xl font-bold mb-2 text-brand-400">RupaOne Full</h3>
-                        <p class="text-gray-400 text-sm">Akses penuh + fitur promosi event.</p>
-                    </div>
-                    <div class="mb-8 shrink-0">
-                        <div class="flex items-end gap-2 mb-2">
-                            <span class="text-gray-400 line-through text-lg">Rp 249.000</span>
-                        </div>
-                        <div class="flex items-end gap-2">
-                            <span class="font-heading text-5xl font-bold text-white">Rp 80.000</span>
-                            <span class="text-gray-400 mb-2">/ selamanya</span>
-                        </div>
-                    </div>
-                    <ul class="space-y-4 mb-10 flex-grow">
-                        <li class="flex items-start gap-3 font-medium text-white">
-                            <i class="fa-solid fa-check-double text-brand-500 mt-1"></i>
-                            <span>Semua fitur di Paket Core, ditambah:</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-star text-brand-500 mt-1"></i>
-                            <span class="text-white font-medium">Format Poster Event (Webinar, Promo, Live)</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">AI generate ilustrasi khusus event</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Prioritas akses rilis fitur baru</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand-500 mt-1"></i>
-                            <span class="text-gray-300">Support prioritas via WhatsApp</span>
-                        </li>
-                        <li class="flex items-start gap-3 bg-indigo-500/10 p-3 rounded-xl border border-indigo-500/20 mt-2">
-                            <i class="fa-solid fa-gift text-indigo-400 mt-1"></i>
-                            <span class="text-indigo-100 font-bold">BONUS: VoMagic (AI Voice Generator)</span>
-                        </li>
-                    </ul>
-                    <a href="https://detrastudios.myr.id/catalog/rupaone-full" target="_blank" class="w-full block text-center py-4 rounded-xl font-bold text-white bg-brand-500 hover:bg-brand-600 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all mt-auto shrink-0">
-                        Ambil RupaOne Full
-                    </a>
-                </div>
-            </div>
-
-            <!-- Add-On Info -->
-            <div class="mt-12 max-w-3xl mx-auto glass-panel p-6 rounded-2xl border border-white/5 text-center">
-                <h4 class="text-white font-bold mb-2 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-unlock-keyhole text-yellow-500"></i> Add-On: Unlock Poster Event
-                </h4>
-                <p class="text-gray-400 text-sm">
-                    Tersedia untuk pengguna Paket Core yang mau unlock fitur Poster Event tanpa beli ulang dari awal.<br>
-                    <span class="text-brand-500 font-medium">Tip: Hemat lebih banyak dengan langsung ambil Paket Full dari awal.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 relative">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Pertanyaan Seputar RupaOne</h2>
-            </div>
-            
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Apakah ini benar-benar sekali bayar?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Ya, 100%. Untuk pengguna Early Access, kamu hanya perlu membayar satu kali (Rp 64k atau Rp 80k) dan mendapatkan akses selamanya tanpa potongan bulanan atau tahunan.</p>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Apa beda RupaOne dengan Canva atau tool desain lain?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Canva berbasis template statis; Anda mengisi konten ke desain orang lain. RupaOne sebaliknya: Anda tentukan gaya visual (warna/mood), AI kami yang membangun ilustrasi dan layout dari nol sesuai arahan Anda, sehingga hasilnya 100% unik dan tak identik dengan pengguna lain.</p>
-                </div>
-                <!-- FAQ Item 3 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Tidak pakai template berarti prosesnya lebih sulit?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Justru jauh lebih simpel! Anda tak perlu mahir software desain. Pilih gaya visual, biarkan AI mengurus detail ilustrasi. Prosesnya hanya: Pilih -> Arahkan -> Sesuaikan teks -> Generate -> Posting.</p>
-                </div>
-                <!-- FAQ Item 4 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Siapa saja yang cocok pakai RupaOne?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Konten kreator pemula, influencer, pemilik UMKM, online shop, admin sosial media, atau siapa pun yang ingin kontennya konsisten dan punya karakter sendiri tanpa perlu membuang waktu belajar desain grafis kompleks.</p>
-                </div>
-                <!-- FAQ Item 5 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Apa beda Paket Core dan Paket Full?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Paket Core (Rp 64.000) mencakup single poster, carousel, dan infografis. Paket Full (Rp 80.000) mencakup semua fitur Core ditambah Poster Event untuk desain acara, webinar, promo, dan peluncuran produk.</p>
-                </div>
-                <!-- FAQ Item 6 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Metode pembayaran apa saja yang tersedia?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Sangat disarankan menggunakan QRIS (tersedia di semua e-wallet dengan biaya admin terendah). Kami juga mendukung e-wallet (GoPay, OVO, Dana, ShopeePay) serta transfer bank reguler. Akses RupaOne Anda akan otomatis aktif detik itu juga setelah pembayaran berhasil.</p>
-                </div>
-                <!-- FAQ Item 7 -->
-                <div class="glass-panel rounded-xl p-6">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-question text-brand-500"></i> Apakah kualitas hasil desain AI bisa diandalkan?
-                    </h4>
-                    <p class="text-gray-400 text-sm">Sangat bisa. Harga promo Rp64.000 ini memungkinkan Anda mencoba teknologi kami dengan risiko minimal. Sebelum mendownload, Anda bisa melihat preview konten AI. Sudah ratusan user awal menjadikannya ujung tombak konten profesional mereka.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-24 relative overflow-hidden bg-gradient-brand">
-        <!-- Overlay pattern -->
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIvPjwvc3ZnPg==')]"></div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
-            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Konten yang Punya Karakter.</h2>
-            <p class="text-xl md:text-2xl text-emerald-100 mb-10 font-light">
-                Mulai bangun identitas visual brand-mu hari ini. Tanpa software ribet, tanpa biaya bulanan mahal. Cukup satu keputusan cerdas.
-            </p>
-            <a href="https://detrastudios.myr.id/catalog/rupaone-full" target="_blank" class="inline-block bg-white text-brand-600 hover:bg-gray-100 px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                Ambil Akses Sekarang
-            </a>
-            <div class="mt-8 flex justify-center gap-6 text-sm text-emerald-100 font-medium">
-                <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Pembayaran Aman</span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-bolt"></i> Akses Instan</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark-900 border-t border-white/10 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <div class="w-6 h-6 rounded bg-brand-500 flex items-center justify-center text-white font-bold text-xs">R</div>
-                    <span class="font-heading font-bold text-xl tracking-tight">RupaOne</span>
-                </div>
-                <div class="text-gray-500 text-sm">
-                    &copy; 2026 RupaOne (Detra Studios). All rights reserved.
-                </div>
-                <div class="flex gap-4">
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fa-brands fa-tiktok text-xl"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-        <button id="lightbox-close" class="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-brand-500 text-4xl md:text-5xl z-[101] transition-colors focus:outline-none">&times;</button>
-        <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl scale-95 transition-transform duration-300">
+  <!-- HERO -->
+  <section class="pt-16 pb-12 px-4 max-w-5xl mx-auto text-center relative overflow-hidden">
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-purple/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <div class="absolute -top-10 left-10 w-48 h-48 bg-blue/10 rounded-full blur-[80px] pointer-events-none"></div>
+    
+    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-light to-purple-light border border-purple-mid text-purple text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide uppercase">
+      <span class="flex h-2 w-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-purple"></span>
+      </span>
+      ✦ AI Visual Generator untuk Kreator Dakwah
+    </div>
+    
+    <!-- Title fonts fixed (leading-snug, tracking-normal prevents squishing) -->
+    <h1 class="font-jakarta text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight sm:leading-tight md:leading-[1.15] mb-6 text-ink max-w-4xl mx-auto tracking-tight">
+      Konten Dakwah <span class="gradient-text">Profesional</span><br class="hidden sm:inline">
+      Setiap Hari — Tanpa Harus Bisa Desain
+    </h1>
+    
+    <p class="text-ink-3 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      AI yang pelajari karakter brand-mu dulu, baru generate konten. Single poster, carousel, infografis — siap posting dalam 2 menit. Bayar sekali, akses selamanya.
+    </p>
+    
+    <!-- Thick CTA buttons implementation -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+      <a href="https://detrastudios.myr.id/catalog/rupaone-full" class="w-full sm:w-auto bg-gradient-to-r from-blue to-purple text-white font-extrabold text-base sm:text-lg px-10 py-5 rounded-full shadow-xl shadow-purple-soft/20 hover:shadow-2xl hover:shadow-purple-soft/30 hover:-translate-y-0.5 transition-all text-center">
+        🔥 Dapatkan RupaOne — Rp 80.000 Selamanya
+      </a>
+      <a href="https://youtube.com/shorts/pxlYj_AjyUM?si=cq7fweyPjfdburY7" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white border-2 border-border text-ink-2 hover:border-purple-soft hover:text-purple font-extrabold text-sm sm:text-base px-8 py-5 rounded-full flex items-center justify-center gap-2 transition-all">
+        <i class="fa-solid fa-play text-xs text-purple"></i> Tonton Demo 60 Detik
+      </a>
+    </div>
+    
+    <div class="flex items-center justify-center flex-wrap gap-4 text-xs text-ink-3 mb-12">
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-purple-soft"></i> Bayar sekali</span>
+      <span class="w-1.5 h-1.5 bg-ink-3/30 rounded-full"></span>
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-purple-soft"></i> Akses instan</span>
+      <span class="w-1.5 h-1.5 bg-ink-3/30 rounded-full"></span>
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-heart text-purple-soft"></i> Garansi 7 hari uang kembali</span>
     </div>
 
-    <!-- Scripts -->
-    <script>
-        // Navbar Scroll Script
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('bg-dark-900/90', 'shadow-lg');
-                navbar.classList.remove('glass-panel');
-            } else {
-                navbar.classList.remove('bg-dark-900/90', 'shadow-lg');
-                navbar.classList.add('glass-panel');
-            }
-        });
-        // Mobile Menu Toggle Script
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
-        const mobileLinks = mobileMenu.querySelectorAll('#mobile-menu a');
+    <!-- PREMIUM TRANSPARENT HERO IMAGE FROM DRIVE -->
+    <div class="relative max-w-4xl mx-auto mt-6">
+      <!-- Glow background accent -->
+      <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue/20 to-purple/20 blur-2xl opacity-75 pointer-events-none"></div>
+      
+      <!-- Container holding transparent image with dynamic float effect -->
+      <div class="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-b from-surface-2/80 to-white/10 p-4 shadow-2xl backdrop-blur-md float-slow">
+        <img src="https://lh3.googleusercontent.com/d/1MQFTQpSIfk6KXAl-hNob_u1B8x6owL3N=w1000" 
+             alt="RupaOne Studio Interface Preview" 
+             class="w-full h-auto object-contain drop-shadow-[0_15px_15px_rgba(124,58,237,0.15)] rounded-2xl transition-all duration-700 hover:scale-[1.01]"
+             onerror="this.onerror=null; this.src='https://placehold.co/1000x560/F5F6FF/7C3AED?text=RupaOne+Premium+AI+Studio';">
+      </div>
+    </div>
+  </section>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // Ganti ikon hamburger menjadi 'X' saat menu terbuka
-            if(mobileMenu.classList.contains('hidden')) {
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
-            } else {
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-xmark');
-            }
-        });
+  <!-- PROOF STRIP -->
+  <div class="border-y border-border py-8 px-4 bg-surface-2 text-center">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="px-4">
+        <div class="font-jakarta text-3xl sm:text-4xl font-extrabold gradient-text">500+</div>
+        <div class="text-xs font-semibold text-ink-3 uppercase tracking-wider mt-1">Kreator Aktif</div>
+      </div>
+      <div class="px-4">
+        <div class="font-jakarta text-3xl sm:text-4xl font-extrabold gradient-text">13</div>
+        <div class="text-xs font-semibold text-ink-3 uppercase tracking-wider mt-1">Gaya Visual AI</div>
+      </div>
+      <div class="px-4">
+        <div class="font-jakarta text-3xl sm:text-4xl font-extrabold gradient-text">Rp 80rb</div>
+        <div class="text-xs font-semibold text-ink-3 uppercase tracking-wider mt-1">Akses Selamanya</div>
+      </div>
+      <div class="px-4">
+        <div class="font-jakarta text-3xl sm:text-4xl font-extrabold gradient-text">&lt; 2 Menit</div>
+        <div class="text-xs font-semibold text-ink-3 uppercase tracking-wider mt-1">Selesai Siap Posting</div>
+      </div>
+    </div>
+  </div>
 
-        // Tutup menu mobile otomatis jika salah satu link diklik
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
-            });
-        });
+  <!-- PAIN POINTS -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+        Masalah Nyata
+      </div>
+      <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-tight">
+        Ini yang Terjadi Setiap Kamu Mau Posting
+      </h2>
+      <p class="text-ink-3 text-sm sm:text-base max-w-lg mx-auto">
+        Kamu tahu harus konsisten berdakwah. Tapi setiap kali kamu memegang HP, realitanya selalu berulang seperti ini:
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">😶</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">Blank total setiap hari</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Buka notes, scroll Pinterest, tapi tetap bingung mau buat konten apa. Akhirnya, waktu terbuang dan kamu batal posting.</p>
+      </div>
+      
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">📉</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">Sudah capek, views tetap jeblok</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Habiskan waktu berjam-jam untuk desain, namun engagement tidak kunjung naik. Mulai frustrasi dan berpikir kamu tidak berbakat.</p>
+      </div>
+      
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">🎭</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">Feed tidak memiliki karakter</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Menggunakan template gratisan Canva yang juga dipakai oleh ribuan akun lain. Akun dakwahmu tampak biasa dan tidak mencolok.</p>
+      </div>
+      
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">💸</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">Mahal tapi hasil pasaran</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Membayar jasa desainer harian yang mahal atau langganan bulanan tanpa hasil visual yang khas. Terlalu membebani anggaran kreator mandiri.</p>
+      </div>
+      
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">⏳</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">Konsistensi sering putus</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Seminggu rajin upload, lalu menghilang selama tiga minggu karena kesibukan lain. Audiens pun akhirnya pergi mencari akun lain.</p>
+      </div>
+      
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 hover:border-purple-mid hover:shadow-lg hover:shadow-purple-soft/5 transition-all">
+        <div class="text-3xl mb-4">🤖</div>
+        <h3 class="font-jakarta text-base font-bold text-ink mb-2">AI generik tidak mengerti brand</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed">Mencoba menggunakan AI publik, namun hasilnya aneh, terlalu barat, atau tidak menyatu dengan visual Islami yang sopan.</p>
+      </div>
+    </div>
 
-        // Lightbox Script
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxClose = document.getElementById('lightbox-close');
-        const galleryImages = document.querySelectorAll('#galeri img');
+    <!-- Solution Statement -->
+    <div class="bg-ink text-white rounded-3xl p-8 sm:p-12 mt-12 text-center relative overflow-hidden shadow-xl">
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-purple-soft/20 rounded-full blur-[60px] pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-blue/15 rounded-full blur-[50px] pointer-events-none"></div>
+      <p class="font-jakarta text-xl sm:text-2xl md:text-3xl font-bold leading-normal max-w-3xl mx-auto relative z-10">
+        Masalah utamanya bukan karena kamu tidak kreatif.<br>
+        <span class="text-blue-mid">Melainkan karena kamu tidak memiliki sistem visual otomatis yang siap melayanimu setiap hari.</span>
+      </p>
+    </div>
+  </section>
 
-        // Tambahkan fungsi klik pada setiap gambar galeri
-        galleryImages.forEach(img => {
-            img.addEventListener('click', () => {
-                let src = img.src;
-                // Mengubah parameter resolusi ke ukuran lebih besar (sz=w2000) untuk memanggil versi HD
-                src = src.replace('&sz=w800', '&sz=w2000'); 
-                lightboxImg.src = src;
-                
-                // Tampilkan lightbox
-                lightbox.classList.remove('hidden');
-                // Animasi halus muncul
-                setTimeout(() => {
-                    lightbox.classList.remove('opacity-0');
-                    lightboxImg.classList.remove('scale-95');
-                    lightboxImg.classList.add('scale-100');
-                }, 10);
-            });
-        });
+  <hr class="border-border">
 
-        // Fungsi menutup Lightbox
-        const closeLightbox = () => {
-            lightbox.classList.add('opacity-0');
-            lightboxImg.classList.remove('scale-100');
-            lightboxImg.classList.add('scale-95');
-            // Sembunyikan sepenuhnya setelah animasi selesai
-            setTimeout(() => {
-                lightbox.classList.add('hidden');
-                lightboxImg.src = '';
-            }, 300);
-        };
+  <!-- HOW IT WORKS -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+        Cara Kerja
+      </div>
+      <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-normal">
+        Dari Ide ke Konten Siap Posting<br class="hidden sm:inline"> dalam 3 Langkah Mudah
+      </h2>
+    </div>
 
-        // Tutup melalui tombol 'X'
-        lightboxClose.addEventListener('click', closeLightbox);
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gradient-to-b from-purple-light to-white border border-purple-mid/50 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+        <div class="text-xs font-bold text-purple tracking-widest uppercase mb-4">Langkah 01</div>
+        <h3 class="font-jakarta text-lg font-bold text-ink mb-2">Pilih format & gaya</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed mb-4">Pilih jenis layout yang kamu inginkan (single poster, carousel, atau infografis). Pilih 1 dari 13 gaya visual AI terbaik.</p>
+        <div class="inline-block bg-purple-light text-purple text-xs font-semibold px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i> ⏱ 20 detik</div>
+      </div>
+      
+      <div class="bg-gradient-to-b from-purple-light to-white border border-purple-mid/50 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+        <div class="text-xs font-bold text-purple tracking-widest uppercase mb-4">Langkah 02</div>
+        <h3 class="font-jakarta text-lg font-bold text-ink mb-2">AI generate otomatis</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed mb-4">Mesin AI RupaOne merancang ilustrasi elegan dan menempatkan tipografi yang selaras. Tanpa prompt manual yang panjang.</p>
+        <div class="inline-block bg-purple-light text-purple text-xs font-semibold px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i> ⏱ 30-60 detik</div>
+      </div>
+
+      <div class="bg-gradient-to-b from-purple-light to-white border border-purple-mid/50 rounded-2xl p-6 shadow-sm relative overflow-hidden">
+        <div class="text-xs font-bold text-purple tracking-widest uppercase mb-4">Langkah 03</div>
+        <h3 class="font-jakarta text-lg font-bold text-ink mb-2">Sesuaikan & Posting</h3>
+        <p class="text-ink-3 text-xs sm:text-sm leading-relaxed mb-4">Ubah teks, ganti skema warna brand, atau selipkan logo milikmu langsung. Tekan simpan, lalu upload ke sosial mediamu.</p>
+        <div class="inline-block bg-purple-light text-purple text-xs font-semibold px-3 py-1 rounded-full"><i class="fa-regular fa-clock mr-1"></i> ⏱ 30 detik</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEXIBILITY SECTION -->
+  <div class="bg-ink text-white py-24 px-4 relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-soft/10 rounded-full blur-[160px] pointer-events-none"></div>
+    
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center md:text-left md:flex items-end justify-between mb-16">
+        <div class="max-w-xl">
+          <div class="inline-block text-xs font-bold uppercase tracking-wider text-blue-mid bg-blue/10 border border-blue/30 px-3 py-1 rounded-full mb-3">
+            Fleksibilitas Kreator
+          </div>
+          <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-white mb-4 tracking-normal">
+            RupaOne: AI yang Fleksibel<br> untuk Semua Kreator
+          </h2>
+          <p class="text-white/60 text-sm sm:text-base leading-relaxed">
+            RupaOne cocok untuk semua tipe pengguna. Sangat mudah digunakan untuk pemula tanpa skill desain dasar, namun tetap sangat powerful untuk menunjang workflow profesional.
+          </p>
+        </div>
+        <div class="mt-6 md:mt-0">
+          <a href="https://detrastudios.myr.id/catalog/rupaone-full" class="inline-block bg-gradient-to-r from-blue to-purple text-white font-extrabold text-sm px-8 py-4.5 rounded-full hover:scale-105 active:scale-95 transition-all">
+            Mulai Coba RupaOne <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/8 hover:border-purple/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-blue/20 text-blue-mid text-xl flex items-center justify-center mb-6">🌱</div>
+          <h3 class="font-jakarta text-xl font-bold text-white mb-3">Untuk Pemula</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Cukup pilih gaya visual, klik tombol generate, dan konten langsung jadi dalam sekejap tanpa repot menulis kode prompt AI yang memusingkan. RupaOne dirancang untuk kepraktisan tingkat tinggi.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/8 hover:border-purple/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple/20 text-purple-mid text-xl flex items-center justify-center mb-6">⚡</div>
+          <h3 class="font-jakarta text-xl font-bold text-white mb-3">Untuk Profesional</h3>
+          <p class="text-white/60 text-sm leading-relaxed">
+            Hasil rancangan visual dari AI dapat kamu gunakan asalkan memiliki lisensi penggunaan komersial. RupaOne memberi kemudahan ekspor format resolusi tinggi siap diolah kembali.
+          </p>
+        </div>
+      </div>
+
+      <!-- Benefits checklist -->
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-mid/10 text-blue-mid text-xs flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Klik & Selesai</h4>
+              <p class="text-white/50 text-xs">Desain instan untuk kebutuhan konten cepat tanpa hambatan teknis.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-mid/10 text-blue-mid text-xs flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Mempercepat Kerja</h4>
+              <p class="text-white/50 text-xs">Memangkas waktu pembuatan aset hingga 90% tanpa membatasi kreativitas.</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <span class="w-6 h-6 rounded-full bg-blue-mid/10 text-blue-mid text-xs flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check"></i></span>
+            <div>
+              <h4 class="font-bold text-sm text-white mb-1">Mudah Dimodifikasi</h4>
+              <p class="text-white/50 text-xs">Output resolusi tinggi siap diolah kembali sesuai branding unikmu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filosofi Quote -->
+      <div class="bg-gradient-to-r from-blue/10 to-purple/10 border border-purple-mid/30 rounded-2xl p-8 text-center">
+        <p class="font-jakarta text-lg sm:text-xl font-medium text-white/90 italic leading-relaxed">
+          "AI dirancang untuk mempercepat pekerjaan berulang Anda,<br class="hidden sm:inline"> bukan untuk menggantikan keaslian dan kesucian pesan dakwah yang Anda bawa."
+        </p>
+        <span class="block mt-4 text-xs font-semibold uppercase tracking-widest text-white/40">— Filosofi RupaOne</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+        Perbandingan
+      </div>
+      <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-normal">
+        RupaOne vs Cara Lama
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Old Way -->
+      <div class="border border-red-200 bg-red-50/50 rounded-2xl p-6 sm:p-8">
+        <div class="text-red-500 font-jakarta text-xs font-extrabold tracking-widest uppercase mb-6 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> ❌ Tools Desain Biasa / Jasa Lama
+        </div>
         
-        // Tutup dengan klik latar belakang hitam
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
+        <ul class="flex flex-col gap-4">
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-red-500 font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-xmark"></i></span>
+            <span><strong>Langganan Bulanan Mahal:</strong> Akses akunmu langsung dinonaktifkan ketika kamu berhenti membayar iuran rutin.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-red-500 font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-xmark"></i></span>
+            <span><strong>Wajib Menguasai Skill Desain:</strong> Membutuhkan waktu belajar berbulan-bulan untuk memahami fitur rumit.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-red-500 font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-xmark"></i></span>
+            <span><strong>Template Pasaran:</strong> Berbagi template yang sama persis dengan ribuan kompetitor dan akun dakwah lain.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-red-500 font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-xmark"></i></span>
+            <span><strong>Pusing Cari Ide Mandiri:</strong> Harus merancang ide tulisan dan mencari gambar pendukung dari nol setiap hari.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RupaOne Way -->
+      <div class="border border-purple-mid bg-purple-light/20 rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+        <div class="absolute -top-12 -right-12 w-36 h-36 bg-purple/10 rounded-full blur-2xl"></div>
+        <div class="text-purple font-jakarta text-xs font-extrabold tracking-widest uppercase mb-6 flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple"></span> ✓ Sistem Pintar RupaOne
+        </div>
         
-        // Tutup dengan tombol 'Escape' di keyboard
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
-                closeLightbox();
-            }
+        <ul class="flex flex-col gap-4 relative z-10">
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-purple font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+            <span><strong>Sekali Bayar Rp 80.000:</strong> Miliki lisensi akses selamanya tanpa ada tagihan bulanan tersembunyi.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-purple font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+            <span><strong>AI yang Bekerja:</strong> Kamu hanya perlu memilih arah gaya visual, lalu AI kami akan mewujudkannya secara instan.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-purple font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+            <span><strong>Desain 100% Autentik:</strong> Gambar & komposisi dihasilkan langsung secara unik oleh AI, tidak ada tiruan.</span>
+          </li>
+          <li class="flex gap-3 items-start text-sm text-ink-2">
+            <span class="text-purple font-bold shrink-0 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+            <span><strong>Pelajari Karakter Brand:</strong> AI mampu menyesuaikan diri dengan DNA warna khas yang diusung oleh akunmu.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="border-border">
+
+  <!-- GALERI SECTION (Requested replacement) -->
+  <section id="galeri" class="py-24 relative overflow-hidden border-b border-white/5 bg-[#0F0F12] text-white font-jakarta">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16">
+        <p class="text-purple font-bold tracking-widest text-sm uppercase mb-3">Lihat Hasilnya Dulu</p>
+        <h2 class="font-jakarta text-3xl md:text-5xl font-bold mb-6">Ini Contoh Konten yang Dibuat dengan <span class="text-purple">RupaOne</span></h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+          Semua konten di bawah ini dihasilkan menggunakan RupaOne — tanpa skill desain, tanpa Canva, tanpa Photoshop. Kamu bisa bikin yang serupa dalam 2 menit.
+        </p>
+      </div>
+
+      <div class="space-y-16">
+        <!-- Single Poster -->
+        <div>
+          <h3 class="font-jakarta text-2xl font-bold mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-image text-purple"></i> Single Poster
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1kkWmUrslCisKS8xxkij4AU-wk96tJ3NF&sz=w800" 
+                   alt="Poster 1" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Single+Poster+1';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=13mTq3k2zIyhc4ZC1Y_yXLwTZ7YfHbAIr&sz=w800" 
+                   alt="Poster 2" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Single+Poster+2';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1Zri-qJqWBgIzBLpeRYkJpGLkyjZiz19t&sz=w800" 
+                   alt="Poster 3" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Single+Poster+3';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=11v-GOgB5na8GMKPZ9W3ixozqmaQIbErY&sz=w800" 
+                   alt="Poster 4" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Single+Poster+4';">
+            </div>
+          </div>
+        </div>
+
+        <!-- Poster Story -->
+        <div>
+          <h3 class="font-jakarta text-2xl font-bold mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-mobile-screen text-purple"></i> Poster Story (IG/TikTok)
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1upoyUgaPoqVFkXY8IUjXCBvOuDbIDcGq&sz=w800" 
+                   alt="Story 1" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/1080x1920/1E1B4B/F5F3FF?text=Poster+Story+1';">
+            </div>
+            <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1DkJTZ-RZOZn_7Url7AG31wFkncyldv3O&sz=w800" 
+                   alt="Story 2" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/1080x1920/1E1B4B/F5F3FF?text=Poster+Story+2';">
+            </div>
+            <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1W6JnXtNaK10XRUCItVRHS-utrPs5UzyX&sz=w800" 
+                   alt="Story 3" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/1080x1920/1E1B4B/F5F3FF?text=Poster+Story+3';">
+            </div>
+            <div class="relative aspect-[9/16] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1tYZSwi4BuQxr0fVIu3pzADCh91cwmcuD&sz=w800" 
+                   alt="Story 4" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/1080x1920/1E1B4B/F5F3FF?text=Poster+Story+4';">
+            </div>
+          </div>
+        </div>
+
+        <!-- Infografis -->
+        <div>
+          <h3 class="font-jakarta text-2xl font-bold mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-chart-pie text-purple"></i> Infografis
+          </h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1vtKOpgjXtGf3hWqS5nesO61ni36EvkCD&sz=w800" 
+                   alt="Infografis 1" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Infografis+1';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1tPT_bW8RAoLRtPunIGLLaD97zT_bRvbo&sz=w800" 
+                   alt="Infografis 2" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Infografis+2';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1v8Q7BJucnDurxGoALsWCuhDo4a6nZqb-&sz=w800" 
+                   alt="Infografis 3" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Infografis+3';">
+            </div>
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 border border-white/10 group shadow-md">
+              <img src="https://drive.google.com/thumbnail?id=1RamaGNf6EwY9wDOplc9rltEYV1stl3QK&sz=w800" 
+                   alt="Infografis 4" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.onerror=null; this.src='https://placehold.co/800x1000/F5F6FF/7C3AED?text=Infografis+4';">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+        Testimoni
+      </div>
+      <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-normal">
+        Yang Mereka Rasakan Setelah Pakai RupaOne
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 (Sahijra) -->
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="text-yellow-500 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-ink-2 text-sm italic mb-6 leading-relaxed">
+            "RupaOne bikin kami jauh lebih konsisten menyebarkan ilmu and kebaikan. Feed kami sekarang punya karakter sendiri — audiens langsung tahu ini postingan kami bahkan saat baru muncul di beranda."
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-purple text-white font-bold flex items-center justify-center font-jakarta">S</div>
+          <div>
+            <h4 class="text-sm font-bold text-ink">Tim Sahijra</h4>
+            <p class="text-[11px] text-ink-3">Akun Dakwah · @sahijra</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 (Ummu Zainab Aisyah - Requested) -->
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="text-yellow-500 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-ink-2 text-sm italic mb-6 leading-relaxed">
+            "Mempercepat pembuatan konten tanpa kehilangan sisi keindahannya/kualitasnya."
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-indigo-500 text-white font-bold flex items-center justify-center font-jakarta">UA</div>
+          <div>
+            <h4 class="text-sm font-bold text-ink">Ummu Zainab Aisyah</h4>
+            <p class="text-[11px] text-ink-3">Kreator Muslimah · @ummuzainabaisyah</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 (Ummu Rayya - Requested) -->
+      <div class="bg-surface-2 border border-border rounded-2xl p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="text-yellow-500 mb-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="text-ink-2 text-sm italic mb-6 leading-relaxed">
+            "Gak perlu ribet ngurusin lisensi gambar pexels atau pusing mikir prompt rumit. Cukup pilih gaya dan template tema Islami, klik buat langsung jadi. Sangat membantu workflow harian kami!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-blue text-white font-bold flex items-center justify-center font-jakarta">UR</div>
+          <div>
+            <h4 class="text-sm font-bold text-ink">Ummu Rayya</h4>
+            <p class="text-[11px] text-ink-3">Growth Family · @growthumma.journey</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="border-border">
+
+  <!-- PRICING & PAYMENT GATEWAY -->
+  <section id="harga" class="py-20 px-4 bg-gradient-to-b from-white to-surface-2">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+          Satu-Satunya Biaya
+        </div>
+        <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-normal">
+          Investasi Sekali, Akses Selamanya
+        </h2>
+        <p class="text-ink-3 text-sm sm:text-base max-w-lg mx-auto">
+          Dapatkan harga penawaran Early Access terbaik sebelum dinaikkan ke harga normal.
+        </p>
+      </div>
+
+      <!-- Main Pricing Card -->
+      <div class="bg-ink text-white rounded-3xl p-6 sm:p-12 max-w-lg mx-auto relative overflow-hidden border border-purple-mid/30 shadow-2xl">
+        <div class="absolute -top-24 -right-24 w-60 h-60 bg-purple/35 rounded-full blur-[80px] pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-blue/20 rounded-full blur-[80px] pointer-events-none"></div>
+        
+        <div class="relative z-10 text-center">
+          <span class="inline-block bg-gradient-to-r from-blue to-purple text-white text-[11px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider mb-6 shadow-md animate-bounce">
+            ⭐ Paling Direkomendasikan
+          </span>
+          <h3 class="text-white/60 text-sm font-semibold tracking-wider uppercase mb-1">RupaOne Full — Early Access</h3>
+          <div class="text-white/30 text-sm line-through decoration-red-500 decoration-2 mb-1">Rp 249.000</div>
+          <div class="font-jakarta text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-mid to-purple-mid leading-none mb-4 tracking-normal">
+            Rp 80.000
+          </div>
+          <p class="text-white/50 text-xs mb-8">Bayar Sekali · Hak Akses Selamanya · Tanpa Langganan Bulanan</p>
+
+          <!-- TODAY'S COUNTDOWN TIMER CARD -->
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-4.5 mb-6 text-center">
+            <p class="text-xs text-purple-mid font-semibold uppercase tracking-wider mb-2.5">
+              ⚠️ Harga Promo Naik Dalam:
+            </p>
+            <div class="grid grid-cols-3 gap-2 max-w-[280px] mx-auto font-mono">
+              <div class="bg-white/10 rounded-xl p-2">
+                <span id="hours-timer" class="block text-xl font-bold text-white">00</span>
+                <span class="text-[9px] text-white/50 uppercase tracking-widest">Jam</span>
+              </div>
+              <div class="bg-white/10 rounded-xl p-2">
+                <span id="minutes-timer" class="block text-xl font-bold text-white">00</span>
+                <span class="text-[9px] text-white/50 uppercase tracking-widest">Menit</span>
+              </div>
+              <div class="bg-white/10 rounded-xl p-2">
+                <span id="seconds-timer" class="block text-xl font-bold text-white">00</span>
+                <span class="text-[9px] text-white/50 uppercase tracking-widest">Detik</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slot Indicator bar -->
+          <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-8 text-left text-xs text-white/70">
+            <div class="flex justify-between items-center mb-2">
+              <span>Slot Promo Early Access Tersisa:</span>
+              <strong class="text-white"><span id="pricing-slot-text">34</span> Slot</strong>
+            </div>
+            <div class="w-full bg-white/10 h-2.5 rounded-full overflow-hidden">
+              <div id="slot-progress-bar" class="bg-gradient-to-r from-blue to-purple h-full rounded-full transition-all duration-[2000ms] ease-out" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- Features Check -->
+          <ul class="text-left flex flex-col gap-3.5 mb-8 border-b border-white/10 pb-8">
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span><strong>Single Poster:</strong> Ciptakan feed estetik penyetop jempol audiens.</span>
+            </li>
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span><strong>Carousel Swipeable:</strong> Bikin konten edukasi hadist beruntun.</span>
+            </li>
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span><strong>Infografis Data:</strong> Sederhanakan sejarah Islam rumit jadi mudah dicerna.</span>
+            </li>
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span><strong>Poster Acara / Event:</strong> Format khusus untuk kajian, webinar, & live streaming.</span>
+            </li>
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span><strong>13 Gaya AI Eksklusif:</strong> Desain acak unik yang mustahil sama dengan akun lain.</span>
+            </li>
+            <li class="flex gap-2.5 items-start text-sm text-white/95">
+              <span class="text-blue-mid mt-0.5 shrink-0"><i class="fa-solid fa-circle-check"></i></span>
+              <span>Dukungan Premium prioritas langsung via WhatsApp.</span>
+            </li>
+          </ul>
+
+          <!-- Premium Gift Bonus Block -->
+          <div class="bg-blue/10 border border-blue-mid/20 rounded-2xl p-5 mb-8 text-left">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">🎁</span>
+              <h4 class="font-jakarta text-sm font-bold text-blue-mid uppercase tracking-wide">Bonus Spesial Pembeli Hari Ini</h4>
+            </div>
+            <strong class="block text-white text-xs mb-1">VoMagic AI Voice Generator (Senilai Rp 97.000)</strong>
+            <p class="text-white/60 text-xs leading-relaxed">Buat pengisi suara video dakwah (Voice Over) yang sangat jernih dan natural secara instan dari teks dakwahmu.</p>
+          </div>
+
+          <!-- Checkout Button Link (Updated with final conversion link) -->
+          <a href="https://detrastudios.myr.id/catalog/rupaone-full" class="block w-full bg-gradient-to-r from-blue to-purple text-white py-5 px-10 rounded-full font-extrabold text-base sm:text-lg shadow-lg shadow-purple-soft/30 hover:shadow-xl hover:shadow-purple-soft/40 hover:-translate-y-0.5 active:translate-y-0 transition-all text-center mb-4">
+            🔥 Ambil Akses RupaOne Full Sekarang
+          </a>
+          
+          <div class="text-white/40 text-[11px] mb-6"><i class="fa-solid fa-shield-halved mr-1"></i> Garansi 7 hari uang kembali tanpa syarat berbelit.</div>
+
+          <!-- Payment badges -->
+          <div class="pt-6 border-t border-white/10">
+            <div class="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-3">Metode Pembayaran Instan Terlengkap:</div>
+            <div class="flex flex-wrap justify-center gap-1.5">
+              <span class="bg-white/5 border border-white/10 text-white/60 text-[10px] px-2 py-1 rounded">QRIS</span>
+              <span class="bg-white/5 border border-white/10 text-white/60 text-[10px] px-2 py-1 rounded">GoPay</span>
+              <span class="bg-white/5 border border-white/10 text-white/60 text-[10px] px-2 py-1 rounded">OVO</span>
+              <span class="bg-white/5 border border-white/10 text-white/60 text-[10px] px-2 py-1 rounded">DANA</span>
+              <span class="bg-white/5 border border-white/10 text-white/60 text-[10px] px-2 py-1 rounded">Transfer Bank</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION (Updated with Trial FAQ at the top) -->
+  <section id="faq" class="py-20 px-4 max-w-3xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-block text-xs font-bold uppercase tracking-wider text-purple bg-purple-light px-3 py-1 rounded-full mb-3">
+        FAQ
+      </div>
+      <h2 class="font-jakarta text-3xl sm:text-4xl font-extrabold text-ink mb-4 tracking-normal">
+        Pertanyaan yang Sering Ditanyakan
+      </h2>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <!-- FAQ ITEM 1: Trial Option (Updated - No icon as requested, matches image_b8cfc8.png layout but closed) -->
+      <div class="border border-border rounded-2xl bg-white overflow-hidden transition-all duration-300">
+        <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+          <span class="font-jakarta font-semibold text-sm sm:text-base text-ink pr-4 flex items-center gap-2">
+            Apakah bisa trial dulu?
+          </span>
+          <span class="w-6 h-6 rounded-full bg-purple-light text-purple flex items-center justify-center shrink-0 font-bold transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+        </button>
+        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 pb-6 text-xs sm:text-sm text-ink-2 leading-relaxed">
+            <p class="mb-3"><strong>Bisa!</strong> Anda bisa mulai mencoba generate gambar dari prompt yang dihasilkan RupaOne dari link Google Docs resmi berikut:</p>
+            <a href="https://docs.google.com/document/d/1byoOx07eDyMQ3U551PO_eLg3SCk5rvxtdiQwgr8CXcw/edit?usp=sharing" 
+               target="_blank" 
+               class="inline-flex items-center gap-2 bg-purple text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-purple-soft hover:scale-[1.02] active:scale-[0.98] transition-all my-2">
+              <i class="fa-solid fa-file-lines"></i> Coba Trial Prompt RupaOne Di Sini <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+            <p class="text-xs text-ink-3 mt-2">Dapatkan ratusan id prompt siap salin gratis untuk menguji kehebatan generator RupaOne secara langsung.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ item 2 -->
+      <div class="border border-border rounded-2xl bg-white overflow-hidden transition-all duration-300">
+        <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+          <span class="font-jakarta font-semibold text-sm sm:text-base text-ink pr-4">Apakah ini benar-benar sekali bayar?</span>
+          <span class="w-6 h-6 rounded-full bg-purple-light text-purple flex items-center justify-center shrink-0 font-bold transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+        </button>
+        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <p class="px-6 pb-6 text-xs sm:text-sm text-ink-3 leading-relaxed">
+            Ya, benar 100%. Untuk para pembeli di program Early Access ini, kamu cukup membayar satu kali seharga Rp 80.000 saja di awal untuk mendapatkan akses ke seluruh update fitur AI kami di masa depan tanpa ada biaya bulanan lagi.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ item 3 -->
+      <div class="border border-border rounded-2xl bg-white overflow-hidden transition-all duration-300">
+        <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+          <span class="font-jakarta font-semibold text-sm sm:text-base text-ink pr-4">Apa bedanya RupaOne dibanding Canva?</span>
+          <span class="w-6 h-6 rounded-full bg-purple-light text-purple flex items-center justify-center shrink-0 font-bold transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+        </button>
+        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <p class="px-6 pb-6 text-xs sm:text-sm text-ink-3 leading-relaxed">
+            Canva menyediakan template yang sifatnya statis (kamu menaruh teks di atas karya orang lain yang sudah ribuan kali dipakai orang lain). RupaOne dirancang khusus dari nol menggunakan mesin AI yang bisa mendesain aset visual secara acak sesuai parameter brand dakwahmu, sehingga tidak ada yang bisa menduplikat karyamu.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ item 4 -->
+      <div class="border border-border rounded-2xl bg-white overflow-hidden transition-all duration-300">
+        <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+          <span class="font-jakarta font-semibold text-sm sm:text-base text-ink pr-4">Apakah saya wajib menguasai software desain grafis?</span>
+          <span class="w-6 h-6 rounded-full bg-purple-light text-purple flex items-center justify-center shrink-0 font-bold transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+        </button>
+        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <p class="px-6 pb-6 text-xs sm:text-sm text-ink-3 leading-relaxed">
+            Sama sekali tidak perlu. Seluruh proses pembuatan gambar, penataan letak, hingga pengaturan jenis font yang selaras diatur secara dinamis oleh AI kami. Tugasmu hanya mengetik teks dakwah, ganti logo, lalu posting!
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ item 5 -->
+      <div class="border border-border rounded-2xl bg-white overflow-hidden transition-all duration-300">
+        <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+          <span class="font-jakarta font-semibold text-sm sm:text-base text-ink pr-4">Bagaimana jika saya tidak merasa cocok dengan hasilnya?</span>
+          <span class="w-6 h-6 rounded-full bg-purple-light text-purple flex items-center justify-center shrink-0 font-bold transition-transform duration-300"><i class="fa-solid fa-plus text-xs"></i></span>
+        </button>
+        <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <p class="px-6 pb-6 text-xs sm:text-sm text-ink-3 leading-relaxed">
+            Kami menawarkan jaminan garansi 7 hari uang kembali penuh tanpa potongan apapun. Cukup kirim pesan singkat ke kontak admin CS kami jika kamu tidak puas dengan performa AI RupaOne, dana investasimu akan segera dikembalikan seutuhnya.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="bg-gradient-to-r from-blue to-purple text-white py-24 px-4 text-center relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="max-w-xl mx-auto relative z-10">
+      <h2 class="font-jakarta text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-none text-white">
+        Mulai Bangun Identitas Visual Dakwahmu Hari Ini
+      </h2>
+      <p class="text-white/80 text-sm sm:text-base mb-10 leading-relaxed">
+        Tanpa perlu pusing memikirkan software ribet. Bebas tagihan bulanan. Cukup satu kali keputusan bijak untuk menghemat waktumu selamanya.
+      </p>
+      <!-- Thick Final CTA Button (Updated with final conversion link) -->
+      <a href="https://detrastudios.myr.id/catalog/rupaone-full" class="inline-block bg-white text-purple hover:scale-105 active:scale-95 font-extrabold text-base sm:text-lg px-12 py-5 rounded-full shadow-2xl transition-all">
+        🔥 Dapatkan RupaOne Full — Rp 80.000
+      </a>
+      <div class="flex items-center justify-center gap-4 text-xs text-white/70 mt-6">
+        <span>✓ Akses Selamanya</span>
+        <span class="w-1.5 h-1.5 bg-white/30 rounded-full"></span>
+        <span>✓ Instant Download</span>
+        <span class="w-1.5 h-1.5 bg-white/30 rounded-full"></span>
+        <span>✓ Jaminan Garansi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-border py-8 text-center text-xs text-ink-3">
+    <p class="mb-2">© 2026 RupaOne · Detra Studios · Semua hak cipta dilindungi.</p>
+    <p class="text-[10px] text-ink-3/60">Tunduk kepada regulasi lisensi penggunaan komersial AI Islami yang beretika.</p>
+  </footer>
+
+  <!-- CUSTOM ALERTS NOTIFICATION (Replacement for banned alerts) -->
+  <div id="custom-toast" class="fixed bottom-6 right-6 bg-ink text-white border border-white/15 px-5 py-3.5 rounded-2xl shadow-2xl translate-y-20 opacity-0 pointer-events-none transition-all duration-300 z-50 flex items-center gap-3 max-w-sm">
+    <span class="text-xl text-purple">⚡</span>
+    <div>
+      <h4 class="font-bold text-xs" id="toast-title">Notifikasi</h4>
+      <p class="text-[10px] text-white/60 mt-0.5" id="toast-message">Pesan notifikasi.</p>
+    </div>
+  </div>
+
+  <!-- RECENT RANDOM CHECKOUT POPUP -->
+  <div id="checkout-popup" class="fixed bottom-6 left-6 bg-white border border-purple-mid p-4 rounded-2xl shadow-2xl flex items-center gap-3.5 transition-all duration-500 transform translate-y-32 opacity-0 z-50 max-w-[320px]">
+    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue to-purple text-white flex items-center justify-center shrink-0 font-jakarta font-bold text-sm">
+      <i class="fa-solid fa-basket-shopping text-xs"></i>
+    </div>
+    <div class="flex-1 pr-1">
+      <div class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-green-500"></span>
+        <h4 class="text-[11px] font-bold text-ink uppercase tracking-wider">Transaksi Baru</h4>
+      </div>
+      <p class="text-xs text-ink-2 mt-0.5 font-medium" id="popup-text">Ahmad S. baru saja mengamankan slot.</p>
+      <span class="text-[9px] text-ink-3 block mt-0.5">Baru saja · <i class="fa-solid fa-circle-check text-green-500 text-[8px]"></i> Terverifikasi</span>
+    </div>
+    <button onclick="dismissCheckoutPopup()" class="text-ink-3 hover:text-ink shrink-0 self-start text-[10px] p-0.5">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Countdown Timer Engine (Today's Midnight Target)
+    function initializeCountdown() {
+      const topTimer = document.getElementById('top-timer');
+      const hoursTimer = document.getElementById('hours-timer');
+      const minutesTimer = document.getElementById('minutes-timer');
+      const secondsTimer = document.getElementById('seconds-timer');
+
+      function updateTimer() {
+        const now = new Date();
+        const midnight = new Date();
+        midnight.setHours(23, 59, 59, 999); // Targets end of today
+
+        let diff = midnight - now;
+
+        if (diff <= 0) {
+          // If past target, reset to next midnight
+          midnight.setDate(midnight.getDate() + 1);
+          diff = midnight - now;
+        }
+
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        const formattedHours = hours < 10 ? '0' + hours : hours;
+        const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+        const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+
+        // Apply to top bar
+        if (topTimer) {
+          topTimer.textContent = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+
+        // Apply to pricing section grids
+        if (hoursTimer) hoursTimer.textContent = formattedHours;
+        if (minutesTimer) minutesTimer.textContent = formattedMinutes;
+        if (secondsTimer) secondsTimer.textContent = formattedSeconds;
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
+    // Random Real-time Checkout Popup Engine
+    const randomNames = [
+      "Ahmad S. dari Surabaya", 
+      "Siti Aminah dari Jakarta Selatan", 
+      "Ust. Fahmi dari Bandung", 
+      "Dewi K. dari Yogyakarta", 
+      "Fajar H. dari Malang", 
+      "Rian H. dari Makassar", 
+      "Budi Utomo dari Semarang", 
+      "Aisyah dari Medan", 
+      "Rizky P. dari Balikpapan",
+      "Nabila K. dari Bogor",
+      "Hadi W. dari Palembang",
+      "Ihsan M. dari Solo"
+    ];
+
+    const randomActivities = [
+      "mengamankan slot promo Rp 80.000",
+      "membeli RupaOne Full - Akses Selamanya",
+      "baru saja checkout lisensi lifetime",
+      "berhasil mengklaim Bonus VoMagic Voice AI",
+      "bergabung dengan 500+ kreator dakwah"
+    ];
+
+    function showRandomCheckoutPopup() {
+      const popup = document.getElementById('checkout-popup');
+      const popupText = document.getElementById('popup-text');
+
+      if (popup && popupText) {
+        // Generate random checkout details
+        const name = randomNames[Math.floor(Math.random() * randomNames.length)];
+        const activity = randomActivities[Math.floor(Math.random() * randomActivities.length)];
+        
+        popupText.innerHTML = `<strong>${name}</strong> baru saja ${activity}.`;
+
+        // Display popup
+        popup.classList.remove('translate-y-32', 'opacity-0');
+        popup.classList.add('translate-y-0', 'opacity-100');
+
+        // Automatic hide after 6 seconds
+        setTimeout(() => {
+          dismissCheckoutPopup();
+        }, 6000);
+      }
+    }
+
+    function dismissCheckoutPopup() {
+      const popup = document.getElementById('checkout-popup');
+      if (popup) {
+        popup.classList.add('translate-y-32', 'opacity-0');
+        popup.classList.remove('translate-y-0', 'opacity-100');
+      }
+    }
+
+    // Loop Random Checkout Toast Notification
+    function startRandomCheckoutSimulator() {
+      // First show after 4 seconds
+      setTimeout(showRandomCheckoutPopup, 4000);
+      
+      // Repeatedly show every 18 seconds
+      setInterval(() => {
+        showRandomCheckoutPopup();
+      }, 18000);
+    }
+
+    // Slot Countdown Variables
+    let currentSlots = 34;
+    const slotCountEl = document.getElementById('slot-count');
+    const pricingSlotText = document.getElementById('pricing-slot-text');
+    const slotProgressBar = document.getElementById('slot-progress-bar');
+
+    // Initialize Page elements
+    window.onload = function() {
+      // Initialize the Midnight Countdown Timer
+      initializeCountdown();
+
+      // Start Checkout Simulation Popup
+      startRandomCheckoutSimulator();
+
+      // Smoothly animate the pricing slot target progress bar
+      setTimeout(() => {
+        if (slotProgressBar) slotProgressBar.style.width = '68%';
+      }, 600);
+
+      // Start automatic simulated slot countdown over time
+      setInterval(() => {
+        if (currentSlots > 3) {
+          if (Math.random() > 0.7) {
+            currentSlots--;
+            updateSlotUI();
+          }
+        }
+      }, 15000);
+    }
+
+    function updateSlotUI() {
+      if (slotCountEl) slotCountEl.textContent = currentSlots;
+      if (pricingSlotText) pricingSlotText.textContent = currentSlots;
+      
+      const percentage = Math.min(100, Math.max(0, (currentSlots / 50) * 100));
+      if (slotProgressBar) slotProgressBar.style.width = `${percentage}%`;
+    }
+
+    // Notification toast engine
+    function showNotification(title, msg) {
+      const toast = document.getElementById('custom-toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastMsg = document.getElementById('toast-message');
+
+      if (toast && toastTitle && toastMsg) {
+        toastTitle.textContent = title;
+        toastMsg.textContent = msg;
+
+        // Animate up
+        toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+
+        // Dismiss after 4s
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }, 4000);
+      }
+    }
+
+    // Accordion Toggle Engine
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const item = button.parentElement;
+      const icon = button.querySelector('.transition-transform');
+
+      if (item.classList.contains('open')) {
+        item.classList.remove('open');
+        content.style.maxHeight = '0';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        // Close other accordion blocks
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          if (c !== content) {
+            c.style.maxHeight = '0';
+            c.parentElement.classList.remove('open');
+            const otherIcon = c.previousElementSibling.querySelector('.transition-transform');
+            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+          }
         });
-    </script>
+
+        item.classList.add('open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(45deg)';
+      }
+    }
+  </script>
 </body>
 </html>
